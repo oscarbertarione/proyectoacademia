@@ -50,11 +50,6 @@ ActiveRecord::Schema.define(version: 20170801185735) do
     t.datetime "image_updated_at"
   end
 
-  create_table "notes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "payments", force: :cascade do |t|
     t.string "email"
     t.string "token"
