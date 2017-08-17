@@ -3,12 +3,17 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
- # config.authenticate_with do
- #     config.current_user_method(&:current_user)
- #    if current_user.admin?
- # redirect_to root_path
-#end
-#end
+  config.authenticate_with do
+      config.current_user_method(&:current_user)
+     if current_user.admin?
+  else
+    redirect_to '/users/sign_in'
+end
+end
+
+
+
+
   # end
   # config.current_user_method(&:current_user)
 
