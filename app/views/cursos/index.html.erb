@@ -12,10 +12,16 @@
 
         <div  class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right" >
-            <li><a href="/">Inicio</a></li>
             <li><a href="/cursos/">Cursos</a></li>
             <li><a href="/panel/index/">Apuntes</a></li>
             <li><a href="/plantillas/">Plantillas</a></li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="/assets/user.png" class="usuario" ></a>
+              <ul class="dropdown-menu" id="drope">
+                <li><a href="/users/edit"><img src="/assets/edit.png" class="usuario2" > Editar Cuenta</a></li>
+                <li><%= link_to(destroy_user_session_path, 
+:method => :delete) do %><img src="/assets/cancel.png" class="usuario2"> Cerrar Sesion<% end %></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -35,12 +41,14 @@
         <% @cursos.each do |curso| %>
         <div class="col-md-6">
           <div id="white" class="shadow99">
-            <%= image_tag curso.icon.url(:thumb), :id => "cursoimg" %>
+            <img src="/assets/iconohome.fw.png" id="cursoimg">
             <div id="cursodiv">
               <h2 id="cursodivh2"><%= curso.title %></h2>
               <p id="cursodivp"><%= curso.summary %></p>
+
             </div>
             <div id="line"></div>
+            
             <h2 id="cursodivh2">Lecciones</h2>
             <% curso.leccions.each do |leccion| %>
             <div class="block">

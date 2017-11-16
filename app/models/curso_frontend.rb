@@ -1,0 +1,2 @@
+class CursoFrontend < ApplicationRecord
+end

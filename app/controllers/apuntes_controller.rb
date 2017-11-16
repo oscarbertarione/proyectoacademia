@@ -24,9 +24,14 @@ class ApuntesController < ApplicationController
   # POST /apuntes
   # POST /apuntes.json
   def create
-    @leccion = Leccion.find(params[ :leccion_id])
+    @leccion = Leccion.find(params[:leccion_id])
     @apunte = @leccion.apuntes.create(apunte_params)
-    redirect_to leccion_path (@leccion)
+    @apunte.user_id = current_user.id
+    if @apunte.save
+      redirect_to @leccion
+    else
+      flash.now[:danger] = "error"
+    end
   end
 
   # PATCH/PUT /apuntes/1

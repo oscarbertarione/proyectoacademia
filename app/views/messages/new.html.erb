@@ -1,0 +1,75 @@
+  <nav class="navbar navbar-default" >
+      <div class="container" id="navbar2">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="tog">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="/assets/logo.fw.png" class="logo" alt="logo"></a>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right" >
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nuestros_cursos">Cursos</a></li>
+            <li><a href="/matriculate">Matricúlate</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/users/sign_in" id="botons">Iniciar Sesión</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div id="home2">
+    <div class="container" >
+         <h3>Contactanos</h3>
+         <p>Rellena los siguientes campos</p>
+    </div>
+  </div>
+
+
+<div id="padd2">
+    <div class="container" >
+    	<div class="row">
+    		<div class="col-md-3">
+    		</div>
+        	<div class="col-md-6">
+  <%= form_for @message, url: create_message_url do |f| %>
+  <%= notice %>
+  <%= @message.errors.full_messages.join(', ') %>
+
+  <%= f.text_field :name, placeholder: 'name', id: 'form2' %>
+  <%= f.email_field :email, placeholder: 'email', id: 'form2' %>
+  <%= f.text_area :body, placeholder: 'body', id: 'form2' %>
+  <%= f.submit 'Enviar', id: 'botonr' %>
+<% end %>
+			</div>
+			<div class="col-md-3">
+    		</div>
+		</div>
+ 	</div>
+</div>
+
+<div id="footer">
+    <div class="container" >
+      <div class="row" >
+         <div class="col-md-6" align="left">
+          <a href="/"><img src="/assets/logow.fw.png" class="logo" alt="logo"></a>
+         </div>
+         <div class="col-md-6" align="right">
+            <div>
+              <a href="/" class="hfootera">Inicio</a>
+              <a href="/nuestros_cursos" class="hfootera">Cursos</a>
+              <a href="/contacto" class="hfootera">Contacto</a>
+            </div>
+            <div id="hfooters">
+              <a href="/" ><img src="/assets/s1.fw.png" alt="facebook"></a>
+              <a href="/" ><img src="/assets/s2.fw.png" alt="twitter"></a>
+              <a href="/" ><img src="/assets/s3.fw.png" alt="Instagram"></a>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,110 @@
+   <nav class="navbar navbar-default" >
+      <div class="container" id="navbar2">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="tog">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="/assets/logo.fw.png" class="logo" alt="logo"></a>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right" >
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nuestros_cursos">Cursos</a></li>
+            <li><a href="/matriculate">Matricúlate</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/users/sign_in" id="botons">Iniciar Sesión</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div id="matricula">
+    <div class="container" >
+         <h1><%= @matricula.titulo%></h1>
+         <h2><%= @matricula.subtitulo%></h2>
+         <h3><%= @matricula.precio%></h3>
+         <a href="/users/sign_up" id="botonr22">Apúntate</a>
+    </div>
+  </div>
+
+  <div id="matricula1">
+    <div class="container" >
+      <h3><%= @matricula.segundo_titulo%></h3>
+      <div class="row">
+        <div class="col-md-4" align="center">
+          <img src="/assets/iconohome.fw.png" >
+          <h4><%= @matricula.icono_titulo_uno%></h4>
+          <p><%= @matricula.icono_texto_uno%></p>
+        </div>
+        <div class="col-md-4" align="center">
+          <img src="/assets/iconohome.fw.png" >
+          <h4><%= @matricula.icono_titulo_dos%></h4>
+          <p><%= @matricula.icono_texto_dos%></p>
+        </div>
+        <div class="col-md-4" align="center">
+          <img src="/assets/iconohome.fw.png" >
+          <h4><%= @matricula.icono_titulo_dos%></h4>
+          <p><%= @matricula.icono_texto_dos%></p>
+        </div>
+      </div>
+      <div class="row" id="martop">
+        <div class="col-md-4" align="center">
+          <img src="/assets/iconohome.fw.png" >
+          <h4><%= @matricula.icono_titulo_cuatro%></h4>
+          <p><%= @matricula.icono_texto_cuatro%></p>
+        </div>
+        <div class="col-md-4" align="center">
+          <img src="/assets/iconohome.fw.png" >
+          <h4><%= @matricula.icono_titulo_cinco%></h4>
+          <p><%= @matricula.icono_texto_cinco%></p>
+        </div>
+        <div class="col-md-4" align="center">
+          <img src="/assets/iconohome.fw.png" >
+          <h4><%= @matricula.icono_titulo_seis%></h4>
+          <p><%= @matricula.icono_texto_seis%></p>
+        </div>
+      </div>
+      <a href="/users/sign_up" id="botonr2">Apúntate</a>
+    </div>
+  </div>
+
+  <div id="home8">
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-7">
+          <h3><%= @home.cuarto_titulo %></h3>
+          <p><%= @home.cuarto_subtitulo %></p>
+          <a href="/contacto" id="botonr4">Contáctanos</a>
+        </div>
+        <div class="col-md-5">
+        </div>
+      </div>
+    </div>
+  </div>
+
+        
+  <div id="footer">
+    <div class="container" >
+      <div class="row" >
+         <div class="col-md-6" align="left">
+          <a href="/"><img src="/assets/logow.fw.png" class="logo" alt="logo"></a>
+         </div>
+         <div class="col-md-6" align="right">
+            <div>
+              <a href="/" class="hfootera">Inicio</a>
+              <a href="/nuestros_cursos" class="hfootera">Cursos</a>
+              <a href="/contacto" class="hfootera">Contacto</a>
+            </div>
+            <div id="hfooters">
+              <a href="/" ><img src="/assets/s1.fw.png" alt="facebook"></a>
+              <a href="/" ><img src="/assets/s2.fw.png" alt="twitter"></a>
+              <a href="/" ><img src="/assets/s3.fw.png" alt="Instagram"></a>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>

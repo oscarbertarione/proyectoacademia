@@ -1,17 +1,22 @@
 <%= bootstrap_devise_error_messages! %>
-<div class="panel panel-default devise-bs">
-  <div class="panel-heading">
-    <h4><%= t('.forgot_your_password', default: 'Forgot your password?') %></h4>
-  </div>
-  <div class="panel-body">
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, role: "form" }) do |f| %>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
-      </div>
 
-      <%= f.submit t('.send_me_reset_password_instructions', default: 'Send me reset password instructions'), class: 'btn btn-primary' %>
-    <% end %>
+<div id="home11">
+    <div class="container" >
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, role: "form" }) do |f| %>
+      <a href="/"><img src="/assets/logo.fw.png" id="logoinicio" alt="logo"></a>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <p>Email</p>
+          <%= f.email_field :email, autofocus: true, id: 'form' %>
+           <%= f.submit t('Reiniciar contraseña', default: 'Reiniciar contraseña'), id: 'botonr90' %>
+          <div id="line"></div>
+          <div id="home11b2">
+          <a href="/users/sign_in" id="home11b">Iniciar sesión</a> / <a href="/users/sign_up" id="home11b">Registrarse</a>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <% end %>
+    </div>
   </div>
-</div>
-<%= render 'devise/shared/links' %>

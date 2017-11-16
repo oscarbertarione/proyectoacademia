@@ -12,10 +12,16 @@
 
         <div  class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right" >
-            <li><a href="/">Inicio</a></li>
             <li><a href="/cursos/">Cursos</a></li>
             <li><a href="/panel/index/">Apuntes</a></li>
             <li><a href="/plantillas/">Plantillas</a></li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="/assets/user.png" class="usuario" ></a>
+              <ul class="dropdown-menu" id="drope">
+                <li><a href="/users/edit"><img src="/assets/edit.png" class="usuario2" > Editar Cuenta</a></li>
+                <li><%= link_to(destroy_user_session_path, 
+:method => :delete) do %><img src="/assets/cancel.png" class="usuario2"> Cerrar Sesion<% end %></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -38,7 +44,7 @@
             <h2 class="h2a"><%= plantilla.title %></h2>
             <p class="pa" id="pa"><%= plantilla.summary %></p>
             <%= link_to 'Descargar', plantilla.file.url, target: '_blank', :id => "boton" %>
-            <a href="" id="previa">Vista previa</a>
+            <!--<a href="" id="previa">Vista previa</a>-->
           </div>
         </div>
         <% end %>

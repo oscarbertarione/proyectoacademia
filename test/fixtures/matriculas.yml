@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyText
+  subtitulo: MyText
+  precio: MyText
+  segundo_titulo: MyText
+  icono_titulo_uno: MyText
+  icono_texto_uno: MyText
+  icono_titulo_dos: MyText
+  icono_texto_dos: MyText
+  icono_titulo_tres: MyText
+  icono_texto_tres: MyText
+  icono_titulo_cuatro: MyText
+  icono_texto_cuatro: MyText
+  icono_titulo_cinco: MyText
+  icono_texto_cinco: MyText
+  icono_titulo_seis: MyText
+  icono_texto_seis: MyText
+
+two:
+  titulo: MyText
+  subtitulo: MyText
+  precio: MyText
+  segundo_titulo: MyText
+  icono_titulo_uno: MyText
+  icono_texto_uno: MyText
+  icono_titulo_dos: MyText
+  icono_texto_dos: MyText
+  icono_titulo_tres: MyText
+  icono_texto_tres: MyText
+  icono_titulo_cuatro: MyText
+  icono_texto_cuatro: MyText
+  icono_titulo_cinco: MyText
+  icono_texto_cinco: MyText
+  icono_titulo_seis: MyText
+  icono_texto_seis: MyText

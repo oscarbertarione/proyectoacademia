@@ -1,0 +1,2 @@
+module CursoFrontendHelper
+end

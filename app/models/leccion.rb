@@ -1,6 +1,7 @@
 class Leccion < ApplicationRecord
 	belongs_to :curso
-	has_many :apuntes
+  has_many :apuntes
+  has_many :users
   has_attached_file :icon, styles: {
     medium: '300x300>',
     thumb: '96x96!'

@@ -92,15 +92,6 @@
           <div id="white" class="top" >
             <h3 class="h1a" >Mis Ultimos Apuntes</h3>
             <div id="apuntescont">
-            <% @apunte.each do |apunte| %>
-              <div class="apuntenumero">
-                <img src="/assets/iconocurso.fw.png" class="iconocurso">
-                <div class="apuntedos">
-                  <p class="apuntitulo"><%= apunte.leccion.curso.title %></p>
-                  <p class="pa"><%= apunte.content %></p>
-                </div>
-              </div>
-              <% end %>
             </div>
             <a href="/panel/index/" id="boton2">Ver todos</a>
           </div>

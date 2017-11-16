@@ -12,14 +12,21 @@
 
         <div  class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right" >
-            <li><a href="/">Inicio</a></li>
             <li><a href="/cursos/">Cursos</a></li>
             <li><a href="/panel/index/">Apuntes</a></li>
             <li><a href="/plantillas/">Plantillas</a></li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="/assets/user.png" class="usuario" ></a>
+              <ul class="dropdown-menu" id="drope">
+                <li><a href="/users/edit"><img src="/assets/edit.png" class="usuario2" > Editar Cuenta</a></li>
+                <li><%= link_to(destroy_user_session_path, 
+:method => :delete) do %><img src="/assets/cancel.png" class="usuario2"> Cerrar Sesion<% end %></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
     </div>
   </nav>
+  
 <div id="blue">
   <div id="leftc">
   <div id="main7">
@@ -38,9 +45,7 @@
                   <iframe src="https://player.vimeo.com/video/<%= @leccion.video %>?color=ffffff&title=0&byline=0&portrait=0" id="frame" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
               <% end %>
-              <p id="lecp">
-                <%= @leccion.content %>
-              </p>
+
             </div>
         </div>
       </div>
@@ -64,12 +69,19 @@
               <h3>Por los momentos no tienes apuntes para esta lección.</h3>
               <% else %>
               <% @leccion.apuntes.each do |apunte| %>
+                <% if apunte.user_id == current_user.id %>
                 <div class="apuntenumero">
                   <img src="/assets/iconocurso.fw.png" class="iconocurso">
                   <div class="apuntelec">
                     <p class="pa"><%= apunte.content %></p>
                   </div>
+                  <div class="apuntelec2">
+                    <%= link_to([apunte.leccion, apunte], 
+:method => :delete) do %><img src="/assets/destroy.fw.png" ><% end %>
+                  </div>
                 </div>
+                <% else %>
+                <% end %>
               <% end %>
               <% end %>
               </div>

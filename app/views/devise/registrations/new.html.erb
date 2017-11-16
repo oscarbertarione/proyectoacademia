@@ -1,67 +1,107 @@
-<script language="Javascript">
+  <nav class="navbar navbar-default" >
+      <div class="container" id="navbar2">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="tog">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="/assets/logo.fw.png" class="logo" alt="logo"></a>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right" >
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nuestros_cursos">Cursos</a></li>
+            <li><a href="/matriculate">Matricúlate</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/users/sign_in" id="botons">Iniciar Sesión</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div id="home2">
+    <div class="container" >
+         <h3>Registrate en nuestro curso</h3>
+         <p>Rellena los siguientes campos y completa la compra</p>
+    </div>
+  </div>
+
+  <script language="Javascript">
   Stripe.setPublishableKey("pk_test_RkUr7XOnqvdXJa3aMiZP760X")
 </script> 
 
-
-
-
-
-
 <%= bootstrap_devise_error_messages! %>
-<div class="panel panel-default devise-bs">
-  <div class="panel-heading">
-    <h4><%= t('.sign_up', default: 'Sign up') %></h4>
-  </div>
-  <div class="panel-body">
+  <div id="homereg">
+    <div class="container" >
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form", class: 'cc_form' }) do |f| %>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-      </div>
-      <%= fields_for( :payment ) do |p| %>
-<div class="row col-md-12">
-<div class="form-group col-md-4 no-left-padding">
-<%= p.label :card_number, "Card Number", data: { stripe: 'label'} %>
-<%= p.text_field :card_number, class: "form-control", required: true, data: { stripe: 'number'} %>
-</div>
-<div class="form-group col-md-2">
-<%= p.label :card_cvv, "Card CVV", data: { stripe: 'label'} %>
-<%= p.text_field :card_cvv, class: "form-control", required: true, data: { stripe: 'cvc'} %>
-</div>
+      <div class="row">
+        <div class="col-md-6">
+          <p id="homeregp">Email</p>
+        <%= f.email_field :email, autofocus: true, id: 'form2' %>
+        
+        <p id="homeregp">Contraseña</p>
+        <%= f.password_field :password, id: 'form2' %>
 
+        <p id="homeregp">Confirmar contraseña</p>
+        <%= f.password_field :password_confirmation, id: 'form2' %>
+        </div>
+        <%= fields_for( :payment ) do |p| %>
+        <div class="col-md-6">
+          <p id="homeregp2">Número de trajeta</p>
+<%= p.text_field :card_number, id: 'form3', required: true, data: { stripe: 'number'} %>
 
-  
-<div class="form-group col-md-6">
-<div class="col-md-12">
-<%= p.label :card_expires, "Card Expires", data: { stripe: 'label'} %>
+<div id="regt">
+<p id="homeregp3">CVV</p>
+<%= p.text_field :card_cvv, id: 'form5', required: true, data: { stripe: 'cvc'} %>
 </div>
-<div class="col-md-3">
+<div id="regt2">
+<p id="homeregp3">Fecha de expedición</p>
 <%= p.select :card_expires_month, options_for_select(Payment.month_options),
-{ include_blank: 'Month' },
+{ include_blank: 'Mes' },
 "data-stripe" => "exp-month",
-class: "form-control", required: true %>
-</div>
-<div class="col-md-3">
+id: 'form4', required: true %>
 <%= p.select :card_expires_year, options_for_select(Payment.year_options.push),
-{ include_blank: 'Year' },
-class: "form-control", 
+{ include_blank: 'Año' },
+id: 'form4', 
 data: { stripe: "exp-year" }, required: true %>
 </div>
-</div>
-</div>
-<% end %>
-
-      
-      <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %>
-    <% end %>
+        </div>
+        <% end %>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+           <%= f.submit t('Apuntarse', default: 'Apuntarse'), id: 'botonr10' %>
+          <div id="line"></div>
+          <a href="/users/sign_in" id="home11a">Iniciar sesión</a>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <% end %>
+    </div>
   </div>
-</div>
-<%= render 'devise/shared/links' %>
+
+   <div id="footer">
+    <div class="container" >
+      <div class="row" >
+         <div class="col-md-6" align="left">
+          <a href="/"><img src="/assets/logow.fw.png" class="logo" alt="logo"></a>
+         </div>
+         <div class="col-md-6" align="right">
+            <div>
+              <a href="/" class="hfootera">Inicio</a>
+              <a href="/nuestros_cursos" class="hfootera">Cursos</a>
+              <a href="/contacto" class="hfootera">Contacto</a>
+            </div>
+            <div id="hfooters">
+              <a href="/" ><img src="/assets/s1.fw.png" alt="facebook"></a>
+              <a href="/" ><img src="/assets/s2.fw.png" alt="twitter"></a>
+              <a href="/" ><img src="/assets/s3.fw.png" alt="Instagram"></a>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  primer_titulo: MyText
+  primer_subtitulo: MyText
+  segundo_titulo: MyText
+  segundo_subtitulo: MyText
+  icono_titulo_uno: MyText
+  icono_subtitulo_uno: MyText
+  check_uno_uno: MyText
+  check_uno_dos: MyText
+  check_uno_tres: MyText
+  check_uno_cuatro: MyText
+  icono_titulo_dos: MyText
+  icono_subtitulo_dos: MyText
+  check_dos_uno: MyText
+  check_dos_dos: MyText
+  check_dos_tres: MyText
+  check_dos_cuatro: MyText
+  tercer_titulo: MyText
+  tercer_subtitulo: MyText
+  opinion_titulo: MyText
+  opinion_uno: MyText
+  opinion_uno_nombre: MyText
+  opinion_dos: MyText
+  opinion_dos_nombre: MyText
+  opinion_tres: MyText
+  opinion_tres_nombre: MyText
+  cuarto_titulo: MyText
+  cuarto_subtitulo: MyText
+
+two:
+  primer_titulo: MyText
+  primer_subtitulo: MyText
+  segundo_titulo: MyText
+  segundo_subtitulo: MyText
+  icono_titulo_uno: MyText
+  icono_subtitulo_uno: MyText
+  check_uno_uno: MyText
+  check_uno_dos: MyText
+  check_uno_tres: MyText
+  check_uno_cuatro: MyText
+  icono_titulo_dos: MyText
+  icono_subtitulo_dos: MyText
+  check_dos_uno: MyText
+  check_dos_dos: MyText
+  check_dos_tres: MyText
+  check_dos_cuatro: MyText
+  tercer_titulo: MyText
+  tercer_subtitulo: MyText
+  opinion_titulo: MyText
+  opinion_uno: MyText
+  opinion_uno_nombre: MyText
+  opinion_dos: MyText
+  opinion_dos_nombre: MyText
+  opinion_tres: MyText
+  opinion_tres_nombre: MyText
+  cuarto_titulo: MyText
+  cuarto_subtitulo: MyText

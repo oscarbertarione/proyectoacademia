@@ -1,0 +1,321 @@
+    <nav class="navbar navbar-default" >
+      <div class="container" id="navbar2">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="tog">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="/assets/logo.fw.png" class="logo" alt="logo"></a>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right" >
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nuestros_cursos">Cursos</a></li>
+            <li><a href="/matriculate">Matricúlate</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/users/sign_in" id="botons">Iniciar Sesión</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div id="home">
+    <div class="container" >
+         <h1><%= @home.primer_titulo %></h1>
+         <h2><%= @home.primer_subtitulo %></h2>
+         <a href="/matriculate" id="botonr">Apúntate</a>
+    </div>
+  </div>
+
+  <div id="home2">
+    <div class="container" >
+         <h3><%= @home.segundo_titulo %></h3>
+         <p><%= @home.segundo_subtitulo %></p>
+    </div>
+  </div>
+
+  <div id="home3">
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-6">
+          <img src="/assets/iconohome.fw.png" class="iconohome">
+          <h4><span class="green"><%= @home.icono_titulo_uno %></span><br>
+          <%= @home.icono_subtitulo_uno %></h4>
+          <div id="checkblock">
+            <div class="greencheck"><img src="/assets/greencheck.fw.png" ></div>
+            <div class="greencheck2">
+              <p><%= @home.check_uno_uno %></p>
+            </div>
+          </div>
+          <div id="checkblock">
+            <div class="greencheck"><img src="/assets/greencheck.fw.png" ></div>
+            <div class="greencheck2">
+              <p><%= @home.check_uno_dos %></p>
+            </div>
+          </div>
+          <div id="checkblock">
+            <div class="greencheck"><img src="/assets/greencheck.fw.png" ></div>
+            <div class="greencheck2">
+              <p><%= @home.check_uno_tres %></p>
+            </div>
+          </div>
+          <div id="checkblock">
+            <div class="greencheck"><img src="/assets/greencheck.fw.png" ></div>
+            <div class="greencheck2">
+              <p><%= @home.check_uno_cuatro %></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="/assets/iconohome.fw.png" class="iconohome">
+          <h4><span class="green"><%= @home.icono_titulo_dos %></span><br>
+<%= @home.icono_subtitulo_dos %></h4>
+          <div id="checkblock">
+            <div class="greencheck"><img src="/assets/greencheck.fw.png" ></div>
+            <div class="greencheck2">
+              <p><%= @home.check_dos_uno %></p>
+            </div>
+          </div>
+          <div id="checkblock">
+            <div class="greencheck"><img src="/assets/greencheck.fw.png" ></div>
+            <div class="greencheck2">
+              <p><%= @home.check_dos_dos %></p>
+            </div>
+          </div>
+          <div id="checkblock">
+            <div class="greencheck"><img src="/assets/greencheck.fw.png" ></div>
+            <div class="greencheck2">
+              <p><%= @home.check_dos_tres %></p>
+            </div>
+          </div>
+          <div id="checkblock">
+            <div class="greencheck"><img src="/assets/greencheck.fw.png" ></div>
+            <div class="greencheck2">
+              <p><%= @home.check_dos_cuatro %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="home4">
+    <div class="container" >
+         <h3><%= @home.tercer_titulo %></h3>
+         <p id="home4p"><%= @home.tercer_subtitulo %></p>
+    </div>
+  </div>
+
+  <div id="home5">
+    <div class="container" >
+      <div class="row" >
+
+        <div class="col-md-6">
+          <div id="whitehome" class="shadow">
+            <div id="cursohome">
+              <h4 id="cursohomeh4"><%= @cursos.title %></h4>
+              <p id="cursohomep"><%= @cursos.summary %></p>
+            </div>
+            <div id="cursohome2">
+              <h2 id="cursodivh2">Lecciones</h2>
+              <% @cursos.leccions.each do |leccion| %>
+              <div class="block">
+                <p id="cursodivp2"><%= leccion.title %></p>
+                <p id="cursodivp3"><%= leccion.summary %></p>
+              </div>
+              <% end %>
+              <a href="/nuestros_cursos/<%= @cursos.id%>" id="botonr2">Ver mas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="whitehome" class="shadow">
+            <div id="cursohome">
+              <h4 id="cursohomeh4">Título del curso de ejemplo</h4>
+              <p id="cursohomep">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
+            </div>
+            <div id="cursohome2">
+              <h2 id="cursodivh2">Lecciones</h2>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <a href="" id="botonr2">Ver mas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="home6">
+    <div class="container" >
+      <div class="row" >
+
+        <div class="col-md-6">
+          <div id="whitehome" class="shadow">
+            <div id="cursohome">
+              <h4 id="cursohomeh4">Título del curso de ejemplo</h4>
+              <p id="cursohomep">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
+            </div>
+            <div id="cursohome2">
+              <h2 id="cursodivh2">Lecciones</h2>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <a href="" id="botonr2">Ver mas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="whitehome" class="shadow">
+            <div id="cursohome">
+              <h4 id="cursohomeh4">Título del curso de ejemplo</h4>
+              <p id="cursohomep">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
+            </div>
+            <div id="cursohome2">
+              <h2 id="cursodivh2">Lecciones</h2>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <div class="block">
+                <p id="cursodivp2">Titulo de la lección 1</p>
+                <p id="cursodivp3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              </div>
+              <a href="" id="botonr2">Ver mas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="home7">
+      <div class="container" >
+      <h3><%= @home.opinion_titulo %></h3>
+        <div class="row" >
+          <div class="col-md-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    <table>
+      <tr>
+        <td><img src="/assets/quote1.jpg" class="quote1"> </td>
+        <td><p id="innerp1"><%= @home.opinion_uno %></p>
+      <p id="innerp2"><%= @home.opinion_uno_nombre %></p></td>
+      <td><img src="/assets/quote2.jpg" class="quote2"> </td>
+      </tr>
+    </table>
+    </div>
+    <div class="item">
+      <table>
+      <tr>
+        <td><img src="/assets/quote1.jpg" class="quote1"> </td>
+        <td><p id="innerp1"><%= @home.opinion_dos %></p>
+      <p id="innerp2"><%= @home.opinion_dos_nombre %></p></td>
+      <td><img src="/assets/quote2.jpg" class="quote2"> </td>
+      </tr>
+    </table>
+    </div>
+    <div class="item">
+      <table>
+      <tr>
+        <td><img src="/assets/quote1.jpg" class="quote1"> </td>
+        <td><p id="innerp1"><%= @home.opinion_tres %></p>
+      <p id="innerp2"><%= @home.opinion_tres_nombre %></p></td>
+      <td><img src="/assets/quote2.jpg" class="quote2"> </td>
+      </tr>
+    </table>
+    </div>
+  </div>
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <img src="/assets/arrowhome1.jpg" class="arrowmobile">
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <img src="/assets/arrowhome2.jpg" class="arrowmobile">
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+          </div>
+        </div>
+        <a href="/matriculate" id="botonr">Apúntate</a>
+      </div>
+    </div>
+
+  <img src="/assets/home2.jpg" class="hiddedesktop">
+  <div id="home8">
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-7">
+          <h3><%= @home.cuarto_titulo %></h3>
+          <p><%= @home.cuarto_subtitulo %></p>
+          <a href="/contacto" id="botonr4">Contáctanos</a>
+        </div>
+        <div class="col-md-5">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <div id="footer">
+    <div class="container" >
+      <div class="row" >
+         <div class="col-md-6" align="left">
+          <a href="/"><img src="/assets/logow.fw.png" class="logo" alt="logo"></a>
+         </div>
+         <div class="col-md-6" align="right">
+            <div>
+              <a href="/" class="hfootera">Inicio</a>
+              <a href="/nuestros_cursos" class="hfootera">Cursos</a>
+              <a href="/contacto" class="hfootera">Contacto</a>
+            </div>
+            <div id="hfooters">
+              <a href="/" ><img src="/assets/s1.fw.png" alt="facebook"></a>
+              <a href="/" ><img src="/assets/s2.fw.png" alt="twitter"></a>
+              <a href="/" ><img src="/assets/s3.fw.png" alt="Instagram"></a>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
