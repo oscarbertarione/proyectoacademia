@@ -12,10 +12,16 @@
 
         <div  class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right" >
-            <li><a href="/">Inicio</a></li>
             <li><a href="/cursos/">Cursos</a></li>
-            <li><a href="/apuntes/">Apuntes</a></li>
+            <li><a href="/panel/index/">Apuntes</a></li>
             <li><a href="/plantillas/">Plantillas</a></li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="/assets/user.png" class="usuario" ></a>
+              <ul class="dropdown-menu" id="drope">
+                <li><a href="/users/edit"><img src="/assets/edit.png" class="usuario2" > Editar Cuenta</a></li>
+                <li><%= link_to(destroy_user_session_path, 
+:method => :delete) do %><img src="/assets/cancel.png" class="usuario2"> Cerrar Sesion<% end %></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -31,39 +37,47 @@
   <div id="main5">
     <div class="container" >
 
-    <% for apunte in @apuntes %>
+    <% @leccions.each do |leccion| %>
       <div class="row" >
         <div class="col-md-12" >
-          
+          <% leccion.apuntes.each do |apunte| %>
+              <% if apunte.user_id == current_user.id %>
           <div id="white3" class="top" >
 
-            <a id="cursoa" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#apunte<%= apunte.id %>" aria-expanded="false" aria-controls="apunte<%= apunte.id %>">
+            <a id="cursoa" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#apunte<%= leccion.id %>" aria-expanded="false" aria-controls="apunte<%= leccion.id %>">
               <div id="apuntediv">
-                <%= image_tag apunte.leccion.curso.icon.url(:thumb), :id => "apunteimg" %>
-                <h2 id="apunteh2"><%= apunte.leccion.curso.title %><br>
-                <span><%= apunte.leccion.title %></span>
-                </h2>
+               <%= image_tag leccion.curso.icon.url(:thumb), :id => "apunteimg" %>
+                <h2 id="apunteh2"><%= leccion.curso.title %><br>
+                <span><%= leccion.title %></span></h2>
+
               </div>
               <img src="/assets/arrow.fw.png" id="arrow3">
             </a>
             
-            <div class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" id="apunte<%= apunte.id %>">
+            <div class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" id="apunte<%= leccion.id %>">
               <div class="apuntescont2" >
+              
                 <div class="apuntenumero">
                   <img src="/assets/iconocurso.fw.png" class="iconocurso">
                   <div class="apuntedos">
                     <p class="pa"><%= apunte.content %></p>
+                    
                   </div>
                 </div>
+
               </div>
             </div>
-
           </div>
+            <% end %>
+          <% end %>
+          
         </div>
       </div>
       <% end %>
+
     </div>
   </div>
+
         
   <footer>
   </footer>
